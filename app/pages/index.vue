@@ -1,6 +1,6 @@
 <template>
-  <div>
-
+  <div class="mt-30 flex flex-col gap-5 container mx-auto">
+    <Hero />
   </div>
 </template>
 

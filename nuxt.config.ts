@@ -10,6 +10,9 @@ export default defineNuxtConfig({
     },
     head: {
       charset: "utf-8",
-    }
+    },
   },
+  ui: {
+    colorMode: false,
+  }
 })
