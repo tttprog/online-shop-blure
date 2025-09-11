@@ -14,10 +14,9 @@
         </u-navigation-menu>
       </div>
       <div class="lg:flex items-center gap-3 hidden">
-        <u-button to="/accounts/login" variant="solid" icon="solar:user-bold" size="lg"
+        <u-button to="#" variant="solid" icon="solar:user-bold" size="lg"
           class="rounded-full bg-transparent text-white hover:bg-transparent hover:text-white border">ورود</u-button>
-        <u-button to="/accounts/login" variant="ghost" icon="solar:user-plus-bold" size="lg"
-          class="rounded-full text-white ">ثبت
+        <u-button to="#" variant="ghost" icon="solar:user-plus-bold" size="lg" class="rounded-full text-white ">ثبت
           نام</u-button>
       </div>
       <USlideover v-model:open="openMenu">
@@ -36,9 +35,9 @@
                 </template>
               </u-navigation-menu>
               <div class="flex items-center justify-between w-full gap-5">
-                <u-button to="/accounts/login" variant="solid" icon="solar:user-bold" size="lg"
+                <u-button to="#" variant="solid" icon="solar:user-bold" size="lg"
                   class="w-1/2 justify-center rounded-full bg-transparent text-white hover:bg-transparent hover:text-white border">ورود</u-button>
-                <u-button to="/accounts/login" variant="ghost" icon="solar:user-plus-bold" size="lg"
+                <u-button to="#" variant="ghost" icon="solar:user-plus-bold" size="lg"
                   class="w-1/2 justify-center rounded-full text-white hover:bg-transparent hover:text-white">ثبت
                   نام</u-button>
               </div>
@@ -71,11 +70,11 @@ const menus = ref([
   },
   {
     label: "درباره ما",
-    to: "/about",
+    to: "#",
   },
   {
     label: "تماس با ما",
-    to: "/contact",
+    to: "#",
   },
 
 
@@ -86,17 +85,17 @@ const dropdownItemsAuth = ref<DropdownMenuItem[]>(
     {
       label: "پروفایل",
       icon: "solar:user-id-bold",
-      to: '/accounts/profile'
+      to: '#'
     },
     {
       label: "سفارشات",
       icon: "solar:cart-large-minimalistic-bold",
-      to: '/accounts/orders'
+      to: '#'
     },
     {
       label: "علاقه مندی ها",
       icon: "solar:bag-heart-bold",
-      to: '/accounts/wishlist'
+      to: '#'
     },
     {
       label: "خروج",
