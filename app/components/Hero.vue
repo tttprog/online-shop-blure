@@ -12,7 +12,7 @@
         variant="outline" color="neutral" size="xl" to="/products">همین الان خرید کن!</u-button>
     </div>
     <div class="lg:w-1/2">
-      <img src="/images/hero.png" alt="" class="w-screen h-[400] lg:h-[500px] rounded-2xl">
+      <img src="/images/hero.png" alt="" class="w-full h-[400] lg:h-[500px] rounded-2xl">
     </div>
   </div>
 </template>
