@@ -1,6 +1,6 @@
 <template>
-  <div class="mt-5 container mx-auto fixed left-0 right-0 rounded-full bg-white/40 z-50">
-    <div class="w-full py-2 px-5 backdrop-blur-md rounded-full shadow flex items-center justify-between">
+  <div class="mt-5 container mx-auto fixed left-0 right-0 rounded-2xl bg-white/20 border border-white/20 z-50">
+    <div class="w-full py-2 px-10 backdrop-blur-sm rounded-full flex items-center justify-between">
       <div>
         <h1 class="lg:text-lg font-bold text-white">آنلاین شاپ آلمان</h1>
       </div>
