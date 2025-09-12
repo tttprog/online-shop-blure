@@ -1,6 +1,7 @@
 <template>
-  <div class="mt-5 container mx-auto fixed left-0 right-0 rounded-2xl bg-white/20 border border-white/20 z-50">
-    <div class="w-full py-2 px-10 backdrop-blur-sm rounded-full flex items-center justify-between">
+  <div class="mt-5 container mx-auto fixed left-0 right-0 rounded-2xl bg-white/20 border border-white/20 z-50"
+    data-aos="fade-up">
+    <div class="w-full py-2 px-10 backdrop-blur-sm rounded-2xl flex items-center justify-between">
       <div>
         <h1 class="lg:text-lg font-bold text-white">آنلاین شاپ آلمان</h1>
       </div>
@@ -13,11 +14,43 @@
           </template>
         </u-navigation-menu>
       </div>
+      <UModal>
+        <UButton class="text-white cursor-pointer lg:hidden" icon="solar:magnifer-bold" variant="ghost" />
+
+        <template #content>
+          <div class="w-full p-3 flex flex-col gap-5 justify-between items-center">
+            <span class="font-bold">جستوجو کنید</span>
+            <div class="flex items-center w-full gap-3">
+              <u-input dir="rtl" placeholder="نام محصول، برند و ..." class="w-full" size="xl">
+                <template #leading>
+                  <Icon name="solar:magnifer-bold" size="25" class="cursor-pointer" />
+                </template>
+              </u-input>
+            </div>
+          </div>
+        </template>
+      </UModal>
       <div class="lg:flex items-center gap-3 hidden">
         <u-button to="#" variant="solid" icon="solar:user-bold" size="lg"
           class="rounded-full bg-transparent text-white hover:bg-transparent hover:text-white border">ورود</u-button>
         <u-button to="#" variant="ghost" icon="solar:user-plus-bold" size="lg" class="rounded-full text-white ">ثبت
           نام</u-button>
+        <UModal class="">
+          <UButton class="text-white cursor-pointer" icon="solar:magnifer-bold" variant="ghost" />
+
+          <template #content>
+            <div class="w-full p-3 flex flex-col gap-5 justify-between items-center">
+              <span class="font-bold">جستوجو کنید</span>
+              <div class="flex items-center w-full gap-3">
+                <u-input dir="rtl" placeholder="نام محصول، برند و ..." class="w-full" size="xl">
+                  <template #leading>
+                    <Icon name="solar:magnifer-bold" size="25" class="cursor-pointer" />
+                  </template>
+                </u-input>
+              </div>
+            </div>
+          </template>
+        </UModal>
       </div>
       <USlideover v-model:open="openMenu">
         <UButton class="text-white lg:hidden" variant="ghost" icon="solar:hamburger-menu-linear"
@@ -45,6 +78,7 @@
           </div>
         </template>
       </USlideover>
+
     </div>
   </div>
 </template>

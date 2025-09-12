@@ -1,13 +1,13 @@
 <template>
   <div class="mt-30 flex flex-col gap-10 container mx-auto">
     <Hero />
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-5">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-5" data-aos="fade-left">
       <MiniCard v-for="item in feauturItems" :item="item" />
     </div>
-    <div class="flex flex-col gap-5">
+    <div class="flex flex-col gap-5" data-aos="fade-up">
       <h6 class="text-2xl text-white font-bold text-center">خرید بر اساس دسته بندی</h6>
     </div>
-    <div class="w-full flex flex-col gap-5">
+    <div class="w-full flex flex-col gap-5" data-aos="fade-right">
       <h6 class="text-2xl text-white font-bold">آخرین محصولات</h6>
       <u-carousel v-slot="{ item }" :items="products" arrows dir="ltr" :ui="{ item: 'sm:basis-1 md:basis-1/2 lg:basis-1/6' }">
         <ProductCard :item="item" />
