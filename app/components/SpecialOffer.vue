@@ -44,25 +44,25 @@
               <div class="space-y-4 mb-8">
                 <div class="flex items-center space-x-3">
                   <div class="w-6 h-6 rounded-full flex items-center justify-center">
-                    <Icon name="solar-check-circle-bold text-white" size="25" />
+                    <Icon name="solar-check-circle-bold" class="text-white" size="25" />
                   </div>
                   <span class="text-lg text-white">کیفیت بالا</span>
                 </div>
                 <div class="flex items-center space-x-3">
                   <div class="w-6 h-6 rounded-full flex items-center justify-center">
-                    <Icon name="solar-check-circle-bold text-white" size="25" />
+                    <Icon name="solar-check-circle-bold" class="text-white" size="25" />
                   </div>
                   <span class="text-lg text-white">ارسال رایگان</span>
                 </div>
                 <div class="flex items-center space-x-3">
                   <div class="w-6 h-6 rounded-full flex items-center justify-center">
-                    <Icon name="solar-check-circle-bold text-white" size="25" />
+                    <Icon name="solar-check-circle-bold" class="text-white" size="25" />
                   </div>
                   <span class="text-lg text-white">گارانتی 18 ماهه</span>
                 </div>
                 <div class="flex items-center space-x-3">
                   <div class="w-6 h-6 rounded-full flex items-center justify-center">
-                    <Icon name="solar-check-circle-bold text-white" size="25" />
+                    <Icon name="solar-check-circle-bold" class="text-white" size="25" />
                   </div>
                   <span class="text-lg text-white">پشتیبانی 24 ساعت</span>
                 </div>
