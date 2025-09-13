@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: false },
-  modules: ['@nuxt/ui', '@nuxt/icon', '@formkit/auto-animate/nuxt', 'nuxt-aos'],
+  modules: ['@nuxt/ui', '@nuxt/icon', 'nuxt-aos'],
   css: ['~/assets/css/main.css'],
   app: {
     rootAttrs: {

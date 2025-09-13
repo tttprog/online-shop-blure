@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-5 container mx-auto fixed left-0 right-0 rounded-2xl bg-white/20 border border-white/20 z-50 w-full"
+  <div class="mt-5 container mx-auto fixed left-0 right-0 rounded-2xl bg-white/20 border border-white/20 z-49 w-full"
     data-aos="fade-up">
     <div class="w-full py-2 px-10 backdrop-blur-sm rounded-2xl flex items-center justify-between">
       <div>

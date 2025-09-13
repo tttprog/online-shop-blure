@@ -1,24 +1,24 @@
 <template>
   <div class="mt-30 flex flex-col gap-10 container mx-auto">
-    <Hero />
+    <LazyHero />
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-5">
-      <MiniCard v-for="item in feauturItems" :item="item" />
+      <LazyMiniCard v-for="item in feauturItems" :item="item" />
     </div>
     <div class="flex flex-col gap-5">
       <h6 class="text-2xl text-white font-bold text-center">خرید بر اساس دسته بندی</h6>
       <u-carousel v-slot="{ item }" :items="categories" arrows dir="ltr"
         :ui="{ item: 'basis-1/2 md:basis-1/4 lg:basis-1/6' }">
-        <CategoryCard :item="item" />
+        <LazyCategoryCard :item="item" />
       </u-carousel>
     </div>
     <div class="w-full flex flex-col gap-5 border p-5 border-white/20 rounded-2xl">
       <h6 class="text-2xl text-white font-bold">آخرین محصولات</h6>
       <u-carousel v-slot="{ item }" :items="products" arrows dir="ltr"
         :ui="{ item: 'sm:basis-1 md:basis-1/2 lg:basis-1/6' }">
-        <ProductCard :item="item" />
+        <LazyProductCard :item="item" />
       </u-carousel>
     </div>
-    <SpecialOffer />
+    <LazySpecialOffer />
   </div>
 </template>
 

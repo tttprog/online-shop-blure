@@ -12,7 +12,7 @@
 
         <!-- Header Section -->
         <div class="text-white p-12 text-center relative backdrop-blur-sm drop-shadow-2xl">
-          <div class="absolute inset-0 border border-white/20 rounded-2xl bg-opacity-20"></div>
+          <div class="absolute inset-0 border border-white/20 rounded-t-2xl  bg-opacity-20"></div>
           <div class="relative z-10">
             <h1 class="text-5xl md:text-7xl font-black mb-4">
               تخفیف استثنایی
