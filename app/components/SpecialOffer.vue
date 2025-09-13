@@ -95,7 +95,7 @@
               </div>
 
               <!-- CTA Button -->
-              <button @click="navigateTo('#')"
+              <button @click="navigateTo('/')"
                 class="shine-effect pulse-animation w-full bg-white/20 backdrop-blur-sm border border-white/20 text-white font-bold py-6 px-12 rounded-2xl text-xl shadow-2xl transform transition-all duration-300 hover:scale-105 mb-4 cursor-pointer">
                 همین الان خرید کن!
               </button>
