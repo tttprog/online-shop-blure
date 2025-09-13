@@ -18,6 +18,7 @@
         <ProductCard :item="item" />
       </u-carousel>
     </div>
+    <SpecialOffer />
   </div>
 </template>
 
