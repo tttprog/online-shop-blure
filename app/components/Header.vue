@@ -1,6 +1,5 @@
 <template>
-  <div class="mt-5 container mx-auto fixed left-0 right-0 rounded-2xl bg-white/20 border border-white/20 z-50 w-full"
-    data-aos="fade-up">
+  <div class="mt-5 container mx-auto fixed left-0 right-0 rounded-2xl bg-white/20 border border-white/20 z-50 w-full">
     <div class="w-full py-2 px-10 backdrop-blur-sm rounded-2xl flex items-center justify-between">
       <div>
         <h1 class="lg:text-lg font-bold text-white">آنلاین شاپ آلمان</h1>
@@ -15,13 +14,13 @@
         </u-navigation-menu>
       </div>
       <UModal v-model:open="openSearch">
-        <UButton class="text-white cursor-pointer lg:hidden" icon="solar:magnifer-bold" fullscreen variant="ghost"
+        <UButton class="text-white cursor-pointer lg:hidden" icon="solar:magnifer-bold"  variant="ghost"
           @click="openSearch = true" />
 
         <template #content>
           <div class="w-full p-10 flex flex-col gap-5 justify-between items-center">
             <div class="flex justify-between items-center w-full ">
-              <Icon name="solar:close-circle-bold" size="25" class="text-red-500 cursor-pointer" @click="openSearch = false" />
+              <Icon name="solar:close-circle-bold" size="25" class="text-black cursor-pointer" @click="openSearch = false" />
               <span class="font-bold">جستوجو کنید</span>
             </div>
             <div class="flex items-center w-full gap-3">
@@ -39,14 +38,14 @@
           class="rounded-full bg-transparent text-white hover:bg-transparent hover:text-white border">ورود</u-button>
         <u-button to="#" variant="ghost" icon="solar:user-plus-bold" size="lg" class="rounded-full text-white ">ثبت
           نام</u-button>
-        <UModal class="" fullscreen v-model:open="openSearch">
+        <UModal class=""  v-model:open="openSearch">
           <UButton class="text-white cursor-pointer" icon="solar:magnifer-bold" variant="ghost"
             @click="openSearch = true" />
 
           <template #content>
             <div class="w-full p-10 flex flex-col gap-5 justify-between items-center">
               <div class="flex justify-between items-center w-full ">
-                <Icon name="solar:close-circle-bold" size="25" class="text-red-500 cursor-pointer" @click="openSearch = false" />
+                <Icon name="solar:close-circle-bold" size="25" class="text-black cursor-pointer" @click="openSearch = false" />
                 <span class="font-bold">جستوجو کنید</span>
               </div>
               <div class="flex items-center w-full gap-3">

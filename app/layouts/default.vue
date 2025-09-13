@@ -1,6 +1,5 @@
 <template>
-  <div class="relative flex flex-col gap-10 bg-[url('/images/bg-blur.png')] bg-cover bg-repeat-space bg-center h-full"
-    v-auto-animate>
+  <div class="relative flex flex-col gap-10 bg-[url('/images/bg-blur.png')] bg-cover bg-repeat-space bg-center h-full">
     <div class="flex flex-col mx-2">
       <Header />
       <slot />
