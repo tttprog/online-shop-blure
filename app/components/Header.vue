@@ -14,13 +14,14 @@
         </u-navigation-menu>
       </div>
       <UModal v-model:open="openSearch">
-        <UButton class="text-white cursor-pointer lg:hidden" icon="solar:magnifer-bold"  variant="ghost"
+        <UButton class="text-white cursor-pointer lg:hidden" icon="solar:magnifer-bold" variant="ghost"
           @click="openSearch = true" />
 
         <template #content>
           <div class="w-full p-10 flex flex-col gap-5 justify-between items-center">
             <div class="flex justify-between items-center w-full ">
-              <Icon name="solar:close-circle-bold" size="25" class="text-black cursor-pointer" @click="openSearch = false" />
+              <Icon name="solar:close-circle-bold" size="25" class="text-black cursor-pointer"
+                @click="openSearch = false" />
               <span class="font-bold">جستوجو کنید</span>
             </div>
             <div class="flex items-center w-full gap-3">
@@ -38,14 +39,15 @@
           class="rounded-full bg-transparent text-white hover:bg-transparent hover:text-white border">ورود</u-button>
         <u-button to="#" variant="ghost" icon="solar:user-plus-bold" size="lg" class="rounded-full text-white ">ثبت
           نام</u-button>
-        <UModal class=""  v-model:open="openSearch">
+        <UModal class="" v-model:open="openSearch">
           <UButton class="text-white cursor-pointer" icon="solar:magnifer-bold" variant="ghost"
             @click="openSearch = true" />
 
           <template #content>
             <div class="w-full p-10 flex flex-col gap-5 justify-between items-center">
               <div class="flex justify-between items-center w-full ">
-                <Icon name="solar:close-circle-bold" size="25" class="text-black cursor-pointer" @click="openSearch = false" />
+                <Icon name="solar:close-circle-bold" size="25" class="text-black cursor-pointer"
+                  @click="openSearch = false" />
                 <span class="font-bold">جستوجو کنید</span>
               </div>
               <div class="flex items-center w-full gap-3">

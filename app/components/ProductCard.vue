@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="p-3 bg-white/20 border border-white/20 rounded-2xl select-none">
+    <div class="p-3 bg-white/20 border border-white/20 rounded-2xl select-none" data-aos="fade-up">
       <div class="relative backdrop-blur-sm flex flex-col justify-between gap-3 items-center text-white">
         <u-badge class="absolute self-end" color="neutral" size="lg">{{ item.category }}</u-badge>
         <img @click="navigateTo('#')" :src="item.imageUrl" :alt="item.title"
