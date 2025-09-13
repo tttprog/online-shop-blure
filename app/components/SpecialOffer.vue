@@ -72,27 +72,29 @@
             <!-- Right Column - Countdown & CTA -->
             <div class="text-center">
               <!-- Countdown Timer -->
-              <div class="countdown-timer rounded-2xl p-8 mb-8">
-                <h3 class="text-2xl font-bold text-white mb-6">زمان باقی مانده:</h3>
-                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 text-center">
-                  <div class="bg-white/20 rounded-lg p-4 shadow-lg">
-                    <div id="days" class="text-3xl font-bold  text-white">02</div>
-                    <div class="text-sm text-white">روز</div>
-                  </div>
-                  <div class="bg-white/20 rounded-lg p-4 shadow-lg">
-                    <div id="hours" class="text-3xl font-bold text-white">14</div>
-                    <div class="text-sm text-white">ساعت</div>
-                  </div>
-                  <div class="bg-white/20 rounded-lg p-4 shadow-lg">
-                    <div id="minutes" class="text-3xl font-bo text-white">32</div>
-                    <div class="text-sm text-white">دقیقه</div>
-                  </div>
-                  <div class="bg-white/20 rounded-lg p-4 shadow-lg">
-                    <div id="seconds" class="text-3xl font-bo text-white">45</div>
-                    <div class="text-sm text-white">ثانیه</div>
+              <client-only>
+                <div class="countdown-timer rounded-2xl p-8 mb-8">
+                  <h3 class="text-2xl font-bold text-white mb-6">زمان باقی مانده:</h3>
+                  <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 text-center">
+                    <div class="bg-white/20 rounded-lg p-4 shadow-lg">
+                      <div id="days" class="text-3xl font-bold  text-white"></div>
+                      <div class="text-sm text-white">روز</div>
+                    </div>
+                    <div class="bg-white/20 rounded-lg p-4 shadow-lg">
+                      <div id="hours" class="text-3xl font-bold text-white"></div>
+                      <div class="text-sm text-white">ساعت</div>
+                    </div>
+                    <div class="bg-white/20 rounded-lg p-4 shadow-lg">
+                      <div id="minutes" class="text-3xl font-bo text-white"></div>
+                      <div class="text-sm text-white">دقیقه</div>
+                    </div>
+                    <div class="bg-white/20 rounded-lg p-4 shadow-lg">
+                      <div id="seconds" class="text-3xl font-bo text-white"></div>
+                      <div class="text-sm text-white">ثانیه</div>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </client-only>
 
               <!-- CTA Button -->
               <button @click="navigateTo('/')"
@@ -141,52 +143,50 @@
 </template>
 
 <script lang="ts" setup>
+import { onMounted } from 'vue'
 
+onMounted(() => {
+  function updateCountdown() {
+    const now = new Date().getTime()
+    const targetTime =
+      now +
+      2 * 24 * 60 * 60 * 1000 +
+      14 * 60 * 60 * 1000 +
+      32 * 60 * 1000 +
+      45 * 1000
 
-function updateCountdown() {
-  // Set target date (2 days, 14 hours, 32 minutes, 45 seconds from now)
-  const now = new Date().getTime();
-  const targetTime = now + (2 * 24 * 60 * 60 * 1000) + (14 * 60 * 60 * 1000) + (32 * 60 * 1000) + (45 * 1000);
+    function updateTimer() {
+      const currentTime = new Date().getTime()
+      const timeLeft = targetTime - currentTime
 
-  function updateTimer() {
-    const currentTime = new Date().getTime();
-    const timeLeft = targetTime - currentTime;
+      const daysElem = document.getElementById('days')
+      const hoursElem = document.getElementById('hours')
+      const minutesElem = document.getElementById('minutes')
+      const secondsElem = document.getElementById('seconds')
 
-    if (timeLeft > 0) {
-      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+      if (timeLeft > 0) {
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24))
+        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60))
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000)
 
-      const daysElem = document.getElementById('days');
-      const hoursElem = document.getElementById('hours');
-      const minutesElem = document.getElementById('minutes');
-      const secondsElem = document.getElementById('seconds');
-
-      if (daysElem) daysElem.textContent = days.toString().padStart(2, '0');
-      if (hoursElem) hoursElem.textContent = hours.toString().padStart(2, '0');
-      if (minutesElem) minutesElem.textContent = minutes.toString().padStart(2, '0');
-      if (secondsElem) secondsElem.textContent = seconds.toString().padStart(2, '0');
-    } else {
-      // Timer expired
-      const daysElem = document.getElementById('days');
-      const hoursElem = document.getElementById('hours');
-      const minutesElem = document.getElementById('minutes');
-      const secondsElem = document.getElementById('seconds');
-
-      if (daysElem) daysElem.textContent = '00';
-      if (hoursElem) hoursElem.textContent = '00';
-      if (minutesElem) minutesElem.textContent = '00';
-      if (secondsElem) secondsElem.textContent = '00';
+        if (daysElem) daysElem.textContent = days.toString().padStart(2, '0')
+        if (hoursElem) hoursElem.textContent = hours.toString().padStart(2, '0')
+        if (minutesElem) minutesElem.textContent = minutes.toString().padStart(2, '0')
+        if (secondsElem) secondsElem.textContent = seconds.toString().padStart(2, '0')
+      } else {
+        if (daysElem) daysElem.textContent = '00'
+        if (hoursElem) hoursElem.textContent = '00'
+        if (minutesElem) minutesElem.textContent = '00'
+        if (secondsElem) secondsElem.textContent = '00'
+      }
     }
+
+    updateTimer()
+    setInterval(updateTimer, 1000)
   }
 
-  updateTimer();
-  setInterval(updateTimer, 1000);
-}
-
-updateCountdown();
+  updateCountdown()
+})
 
 </script>
-
-<style></style>
