@@ -10,7 +10,7 @@ export default defineAppConfig({
                 title: 'text-white',
                 description: 'text-white',
                 close: 'text-white',
-                icon: 'bg-white'
+                icon: 'bg-white',
             }
         },
         modal: {

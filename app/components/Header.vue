@@ -21,13 +21,13 @@
         <template #content>
           <div class="w-full p-10 flex flex-col gap-5 justify-between items-center">
             <div class="flex justify-between items-center w-full ">
+              <span class="font-bold">جستوجو کنید</span>
               <Icon name="solar:close-circle-bold" size="25" class="text-black cursor-pointer"
                 @click="openSearch = false" />
-              <span class="font-bold">جستوجو کنید</span>
             </div>
             <div class="flex items-center w-full gap-3">
-              <u-input dir="rtl" placeholder="نام محصول، برند و ..." class="w-full" size="xl">
-                <template #leading>
+              <u-input placeholder="نام محصول، برند و ..." class="w-full" size="xl">
+                <template #trailing>
                   <Icon name="solar:magnifer-bold" size="25" class="cursor-pointer" />
                 </template>
               </u-input>
@@ -47,13 +47,13 @@
           <template #content>
             <div class="w-full p-10 flex flex-col gap-5 justify-between items-center">
               <div class="flex justify-between items-center w-full ">
+                <span class="font-bold">جستوجو کنید</span>
                 <Icon name="solar:close-circle-bold" size="25" class="text-black cursor-pointer"
                   @click="openSearch = false" />
-                <span class="font-bold">جستوجو کنید</span>
               </div>
               <div class="flex items-center w-full gap-3">
-                <u-input dir="rtl" placeholder="نام محصول، برند و ..." class="w-full" size="xl">
-                  <template #leading>
+                <u-input placeholder="نام محصول، برند و ..." class="w-full" size="xl">
+                  <template #trailing>
                     <Icon name="solar:magnifer-bold" size="25" class="cursor-pointer" />
                   </template>
                 </u-input>
@@ -69,8 +69,7 @@
         <template #content>
           <div class="flex flex-col gap-10 h-screen bg-[url('/images/bg-blur.png')] p-3 bg-cover bg-center">
             <div class="backdrop-blur-3xl h-screen p-5 flex gap-10 flex-col shadow-2xl rounded-3xl">
-              <u-button variant="outline" color="neutral" icon="solar:close-circle-outline"
-                class="w-auto self-start rounded-full" size="xl" @click="openMenu = false"></u-button>
+              <Icon name="solar:close-circle-bold" class="text-white" size="30" @click="openMenu = false" />
               <u-navigation-menu :items="menus" dir="rtl" orientation="vertical" variant="link">
                 <template #item-label="{ item, active }">
                   <span class="text-white" v-if="active">{{ item.label }}</span>
