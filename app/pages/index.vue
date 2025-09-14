@@ -19,6 +19,16 @@
       </u-carousel>
     </div>
     <LazySpecialOffer />
+    <div class="w-full flex flex-col gap-5 border p-5 border-white/20 rounded-2xl">
+      <h6 class="text-2xl text-white font-bold">پر طرفدار ها 💥</h6>
+      <u-carousel v-slot="{ item }" :items="products" arrows dir="ltr"
+        :ui="{ item: 'sm:basis-1 md:basis-1/2 lg:basis-1/6' }">
+        <LazyProductCard :item="item" />
+      </u-carousel>
+    </div>
+    <div class="grid grid-cols-2 gap-5">
+      <LazyCategoryCard v-for="item in categories" :item="item" />
+    </div>
   </div>
 </template>
 
@@ -121,31 +131,6 @@ const categories = ref([
   {
     "image": "/images/iphone.png",
     "title": "کیف و ساک",
-    "slug": "bags"
-  },
-  {
-    "image": "/images/iphone.png",
-    "title": "دسته بندی ۱",
-    "slug": "bags"
-  },
-  {
-    "image": "/images/iphone.png",
-    "title": "دسته بندی ۲",
-    "slug": "bags"
-  },
-  {
-    "image": "/images/iphone.png",
-    "title": "دسته بندی ۳",
-    "slug": "bags"
-  },
-  {
-    "image": "/images/iphone.png",
-    "title": "دسته بندی ۴",
-    "slug": "bags"
-  },
-  {
-    "image": "/images/iphone.png",
-    "title": "دسته بندی ۵",
     "slug": "bags"
   },
 
