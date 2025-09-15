@@ -27,7 +27,14 @@
       </u-carousel>
     </div>
     <div class="grid grid-cols-2 gap-5">
-      <LazyCategoryCard v-for="item in categories" :item="item" />
+      <LazyCategoryCard v-for="item in popularCategories" :item="item" />
+    </div>
+    <div class="w-full flex flex-col gap-5 border p-5 border-white/20 rounded-2xl">
+      <h6 class="text-2xl text-white font-bold">اخیرا مشاهده کردید</h6>
+      <u-carousel v-slot="{ item }" :items="products" arrows dir="ltr"
+        :ui="{ item: 'sm:basis-1 md:basis-1/2 lg:basis-1/6' }">
+        <LazyProductCard :item="item" />
+      </u-carousel>
     </div>
   </div>
 </template>
@@ -113,6 +120,45 @@ const products = ref([
 ])
 
 const categories = ref([
+  {
+    "image": "/images/iphone.png",
+    "title": "موبایل",
+    "slug": "mobile"
+  },
+  {
+    "image": "/images/iphone.png",
+    "title": "لباس مردانه و زنانه",
+    "slug": "clothes"
+  },
+  {
+    "image": "/images/iphone.png",
+    "title": "کفش",
+    "slug": "shoes"
+  },
+  {
+    "image": "/images/iphone.png",
+    "title": "کیف و ساک",
+    "slug": "bags"
+  },
+  {
+    "image": "/images/iphone.png",
+    "title": "دارو",
+    "slug": "bags"
+  },
+  {
+    "image": "/images/iphone.png",
+    "title": "کامپیوتر",
+    "slug": "bags"
+  },
+  {
+    "image": "/images/iphone.png",
+    "title": "آشپزخانه",
+    "slug": "bags"
+  },
+
+])
+
+const popularCategories = ref([
   {
     "image": "/images/iphone.png",
     "title": "موبایل",

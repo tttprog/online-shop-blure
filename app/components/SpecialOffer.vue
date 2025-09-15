@@ -1,6 +1,9 @@
 <template>
   <div>
-    <div class="w-full bg-white/20 rounded-2xl">
+    <div class="w-full flex flex-col lg:flex-row gap-5 items-center bg-white/20 rounded-2xl" data-aos="fade-up">
+      <div class="w-full lg:w-1/2">
+        <img src="/images/iphone.png" alt="title" class="select-none">
+      </div>
       <!-- Main Offer Card -->
       <div class="backdrop-blur-sm rounded-2xl shadow-2xl overflow-hidden relative">
         <!-- Offer Badge -->
@@ -11,8 +14,8 @@
         </div>
 
         <!-- Header Section -->
-        <div class="text-white p-12 text-center relative backdrop-blur-sm drop-shadow-2xl">
-          <div class="absolute inset-0 border border-white/20 rounded-t-2xl  bg-opacity-20"></div>
+        <div class="text-white p-12 text-center relative backdrop-blur-sm">
+          <div class="absolute inset-0 bg-white/20  bg-opacity-20"></div>
           <div class="relative z-10">
             <h1 class="text-5xl md:text-7xl font-black mb-4">
               تخفیف استثنایی

@@ -36,10 +36,24 @@
         </template>
       </UModal>
       <div class="lg:flex items-center gap-3 hidden">
-        <u-button to="#" variant="solid" icon="solar:user-bold" size="lg"
-          class="rounded-full bg-transparent text-white hover:bg-transparent hover:text-white border">ورود</u-button>
-        <u-button to="#" variant="ghost" icon="solar:user-plus-bold" size="lg" class="rounded-full text-white ">ثبت
-          نام</u-button>
+        <div class="flex items-center gap-3" v-if="!authenticated">
+          <u-button @click="authenticated = true" to="#" variant="solid" icon="solar:user-bold" size="lg"
+            class="rounded-full bg-transparent text-white hover:bg-transparent hover:text-white border">ورود</u-button>
+          <u-button @click="authenticated = true" to="#" variant="ghost" icon="solar:user-plus-bold" size="lg"
+            class="rounded-full text-white ">ثبت
+            نام</u-button>
+        </div>
+        <div v-if="authenticated">
+          <UDropdownMenu :items="dropdownItemsAuth" size="xl" dir="rtl" :ui="{
+            content: 'w-48 bg-white/80',
+            item: 'w-full text-black cursor-pointer',
+            itemLeadingIcon: 'text-black'
+
+          }">
+            <UButton icon="solar:user-bold" :label="username" color="neutral" trailing-icon="solar:alt-arrow-down-bold"
+              variant="outline" class="bg-white/20 text-white border border-white/20 hover:bg-white/20" />
+          </UDropdownMenu>
+        </div>
         <UModal class="" v-model:open="openSearch">
           <UButton class="text-white cursor-pointer" icon="solar:magnifer-bold" variant="ghost"
             @click="openSearch = true" />
@@ -68,20 +82,36 @@
 
         <template #content>
           <div class="flex flex-col gap-10 h-screen bg-[url('/images/bg-blur.png')] p-3 bg-cover bg-center">
-            <div class="backdrop-blur-3xl h-screen p-5 flex gap-10 flex-col shadow-2xl rounded-3xl">
-              <Icon name="solar:close-circle-bold" class="text-white" size="30" @click="openMenu = false" />
-              <u-navigation-menu :items="menus" dir="rtl" orientation="vertical" variant="link">
-                <template #item-label="{ item, active }">
-                  <span class="text-white" v-if="active">{{ item.label }}</span>
-                  <span class="text-white hover:text-white" v-if="!active">{{ item.label }}</span>
-                </template>
-              </u-navigation-menu>
+            <div class="backdrop-blur-3xl h-screen p-5 flex gap-10 flex-col shadow-2xl rounded-3xl justify-between">
+              <div class="flex flex-col gap-5">
+                <Icon name="solar:close-circle-bold" class="text-white" size="30" @click="openMenu = false" />
+                <u-navigation-menu :items="menus" dir="rtl" orientation="vertical" variant="link">
+                  <template #item-label="{ item, active }">
+                    <span class="text-white" v-if="active">{{ item.label }}</span>
+                    <span class="text-white hover:text-white" v-if="!active">{{ item.label }}</span>
+                  </template>
+                </u-navigation-menu>
+              </div>
               <div class="flex items-center justify-between w-full gap-5">
-                <u-button to="#" variant="solid" icon="solar:user-bold" size="lg"
-                  class="w-1/2 justify-center rounded-full bg-transparent text-white hover:bg-transparent hover:text-white border">ورود</u-button>
-                <u-button to="#" variant="ghost" icon="solar:user-plus-bold" size="lg"
-                  class="w-1/2 justify-center rounded-full text-white hover:bg-transparent hover:text-white">ثبت
-                  نام</u-button>
+                <div class="flex items-center gap-3 w-full" v-if="!authenticated">
+                  <u-button @click="authenticated = true" to="#" variant="solid" icon="solar:user-bold" size="lg"
+                    class="rounded-full bg-transparent text-white hover:bg-transparent hover:text-white border">ورود</u-button>
+                  <u-button @click="authenticated = true" to="#" variant="ghost" icon="solar:user-plus-bold" size="lg"
+                    class="rounded-full text-white ">ثبت
+                    نام</u-button>
+                </div>
+                <div v-if="authenticated">
+                  <UDropdownMenu :items="dropdownItemsAuth" size="xl" dir="rtl" :ui="{
+                    content: 'w-48 bg-white/80',
+                    item: 'w-full text-black cursor-pointer',
+                    itemLeadingIcon: 'text-black'
+
+                  }">
+                    <UButton icon="solar:user-bold" :label="username" color="neutral"
+                      trailing-icon="solar:alt-arrow-down-bold" variant="outline"
+                      class="bg-white/20 text-white border border-white/20 hover:bg-white/20" />
+                  </UDropdownMenu>
+                </div>
               </div>
             </div>
           </div>
