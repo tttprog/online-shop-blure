@@ -11,7 +11,7 @@
     <div class="flex flex-col mx-2">
       <Header />
       <slot />
-      <div class="mt-50"></div>
+      <Footer />
     </div>
   </div>
 </template>

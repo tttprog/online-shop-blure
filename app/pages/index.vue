@@ -12,7 +12,10 @@
       </u-carousel>
     </div>
     <div class="w-full flex flex-col gap-5 border p-5 border-white/20 rounded-2xl">
-      <h6 class="text-2xl text-white font-bold">آخرین محصولات</h6>
+      <div class="flex items-center justify-between">
+        <h6 class="text-2xl text-white font-bold">آخرین محصولات</h6>
+        <nuxt-link to="#" class="text-white underline">مشاهده همه</nuxt-link>
+      </div>
       <u-carousel v-slot="{ item }" :items="products" arrows dir="ltr"
         :ui="{ item: 'sm:basis-1 md:basis-1/2 lg:basis-1/6' }">
         <LazyProductCard :item="item" />
@@ -20,7 +23,10 @@
     </div>
     <LazySpecialOffer />
     <div class="w-full flex flex-col gap-5 border p-5 border-white/20 rounded-2xl">
-      <h6 class="text-2xl text-white font-bold">پر طرفدار ها 💥</h6>
+      <div class="flex items-center justify-between">
+        <h6 class="text-2xl text-white font-bold">پر طرفدار ها 💥</h6>
+        <nuxt-link to="#" class="text-white underline">مشاهده همه</nuxt-link>
+      </div>
       <u-carousel v-slot="{ item }" :items="products" arrows dir="ltr"
         :ui="{ item: 'sm:basis-1 md:basis-1/2 lg:basis-1/6' }">
         <LazyProductCard :item="item" />
@@ -36,6 +42,13 @@
         <LazyProductCard :item="item" />
       </u-carousel>
     </div>
+    <div class="flex flex-col items-center justify-center gap-5 border border-white/20 p-5 rounded-2xl">
+      <h6 class="text-2xl text-white font-bold">اخرین مقاله ها</h6>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <ArticleCard v-for="article in articles" :item="article" />
+      </div>
+    </div>
+    <JoinNews />
   </div>
 </template>
 
@@ -182,6 +195,32 @@ const popularCategories = ref([
 
 ])
 
+const articles = ref([
+  {
+    title: "مقاله تستی 1",
+    content: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز ",
+    slug: "test-article-1",
+    imageUrl: "/images/iphone.png",
+  },
+  {
+    title: "مقاله تستی 2",
+    content: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز ",
+    slug: "test-article-1",
+    imageUrl: "/images/iphone.png",
+  },
+  {
+    title: "مقاله تستی 3",
+    content: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز ",
+    slug: "test-article-1",
+    imageUrl: "/images/iphone.png",
+  },
+  {
+    title: "مقاله تستی 4",
+    content: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز ",
+    slug: "test-article-1",
+    imageUrl: "/images/iphone.png",
+  },
+])
 
 </script>
 
