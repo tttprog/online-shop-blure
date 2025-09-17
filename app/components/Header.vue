@@ -81,8 +81,8 @@
           @click="openMenu = true" />
 
         <template #content>
-          <div class="flex flex-col gap-10 h-screen bg-[url('/images/bg-blur.png')] p-3 bg-cover bg-center">
-            <div class="backdrop-blur-3xl h-screen p-5 flex gap-10 flex-col shadow-2xl rounded-3xl justify-between">
+          <div class="flex flex-col gap-10 h-full bg-[url('/images/bg-blur.png')] p-3 bg-cover bg-center">
+            <div class="backdrop-blur-3xl h-full p-5 flex gap-10 flex-col shadow-2xl rounded-3xl justify-between">
               <div class="flex flex-col gap-5">
                 <Icon name="solar:close-circle-bold" class="text-white" size="30" @click="openMenu = false" />
                 <u-navigation-menu :items="menus" dir="rtl" orientation="vertical" variant="link">

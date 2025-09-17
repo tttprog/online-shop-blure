@@ -121,7 +121,7 @@
 
         <!-- Footer Section -->
         <div class="bg-white/20 p-8 text-center">
-          <div class="grid grid-cols-2 lg:grid-cols-4 justify-center items-center text-white backdrop-blur-sm">
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-5 justify-center items-center rounded-2xl text-white backdrop-blur-sm">
             <div class="flex items-center space-x-2">
               <Icon name="solar:scooter-bold" size="30" />
               <span>ارسال رایگان</span>
